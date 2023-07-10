@@ -1,0 +1,11 @@
+prefix=/home/taylordevs/PHP-Binaries-php-8.2/bin/php7
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${exec_prefix}/include
+
+Name: libmongoc
+Description: The libmongoc MongoDB client library.
+Version: 1.24.1
+Requires: libbson-static-1.0
+Libs: -L${libdir} -lmongoc-static-1.0  -L/home/taylordevs/PHP-Binaries-php-8.2/bin/php7/lib -lssl -L/home/taylordevs/PHP-Binaries-php-8.2/bin/php7/lib -lcrypto -lrt -lresolv
+Cflags: -I${includedir}/libmongoc-1.0 -DMONGOC_STATIC
